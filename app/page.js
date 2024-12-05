@@ -14,7 +14,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center w-screen h-screen">
                 <div className="flex items-center justify-center flex-col gap-10 text-center">
                     <Image src={'Logo.svg'} width={600} height={600} className="lg:w-auto lg:h-auto w-60" alt="bg" />
-                    <span className="capitalize text-lg lg:text-3xl">honouring every intersection, empowering every journey</span>
+                    <span className="capitalize text-lg px-10 lg:text-3xl">honouring every intersection, empowering every journey</span>
                 </div>
             </div>
             <HowCanWeHelp />
