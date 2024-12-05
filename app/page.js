@@ -3,9 +3,14 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="w-screen h-screen overflow-x-hidden text-pretty">
+        <div className="w-screen h-auto overflow-x-hidden text-pretty relative">
             <NavBar />
-            <Image src={'BG.svg'} width={1024} height={1024} className="w-screen h-screen absolute top-0 left-0 object-cover -z-10" alt="bg" />
+            <div className="w-[400vw] h-screen fixed left-0 top-0 -z-10 flex animate-moveLeft">
+                <Image src={'BG.svg'} width={1024} height={1024} className="w-screen h-screen object-cover -z-10" alt="bg" />
+                <Image src={'BG.svg'} width={1024} height={1024} className="w-screen h-screen object-cover -z-10 scale-x-[-1]" alt="bg" />
+                <Image src={'BG.svg'} width={1024} height={1024} className="w-screen h-screen object-cover -z-10" alt="bg" />
+                <Image src={'BG.svg'} width={1024} height={1024} className="w-screen h-screen object-cover -z-10 scale-x-[-1]" alt="bg" />
+            </div>
             <div className="flex flex-col items-center justify-center w-screen h-screen">
                 <div className="flex items-center justify-center flex-col gap-10 text-center">
                     <Image src={'Logo.svg'} width={600} height={600} className="lg:w-auto lg:h-auto w-60" alt="bg" />
@@ -13,6 +18,7 @@ export default function Home() {
                 </div>
             </div>
             <HowCanWeHelp />
+            <Portfolio />
         </div>
     );
 }
@@ -28,6 +34,14 @@ const NavBar = () => {
 }
 
 const HowCanWeHelp = () => {
+
+    const Section = ({ imgSrc, title, detail }) => (
+        <div className="flex flex-col items-center justify-center text-center p-10 gap-4 text-pretty">
+            <Image src={imgSrc} width={600} height={600} className="lg:w-96 lg:h-auto w-60" alt="bg" />
+            <span className="text-3xl font-bold capitalize">{title}</span>
+            <span className="text-black text-sm lg:text-base font-light">{detail}</span>
+        </div>
+    )
     return (
         <div className="w-screen h-auto lg:h-screen flex flex-col items-center justify-center relative font-semibold p-4 lg:p-40 text-center gap-8 _text-green-900">
             <span className="capitalize text-3xl lg:text-7xl font-bold">How can we help?</span>
@@ -40,10 +54,19 @@ const HowCanWeHelp = () => {
         </div>
     )
 }
-const Section = ({ imgSrc, title, detail }) => (
-    <div className="flex flex-col items-center justify-center text-center p-10 gap-4 text-pretty">
-        <Image src={imgSrc} width={600} height={600} className="lg:w-96 lg:h-auto w-60" alt="bg" />
-        <span className="text-3xl font-bold capitalize">{title}</span>
-        <span className="text-black text-sm lg:text-base font-light">{detail}</span>
-    </div>
-)
+
+const Portfolio = () => {
+    return (
+        <div className="w-screen h-auto lg:h-screen flex items-center justify-center relative font-semibold p-4 lg:p-40 text-center gap-8 _text-green-900">
+            <div className="w-1/2 capitalize flex flex-col text-left gap-8">
+                <span className="lg:text-7xl">Meet Bernadette</span>
+                <div className="text-lg">
+                    <span>A seasoned mental health professional with a formal ADHD diagnosis, Bernadette brings a unique perspective shaped by her Filipino heritage and upbringing in Jakarta, Indonesia. Now based in Australia, she understands the complexities of navigating diverse identities.</span>
+                    <span>Believing in the power of meaningful conversations and comprehensive training, Bernadette excels at turning challenging topics into relatable, actionable insights. She emphasizes that information must be accessible to be truly impactful.</span>
+                    <span>As the Engagement and Recovery Lead in mental health, Bernadette supports clients while providing supervision and training for support workers. Her expertise spans mental health and inclusive practices.</span>
+                </div>
+            </div>
+            <Image src={"/DP.png"} width={600} height={600} className="lg:w-[500px] lg:h-auto w-60 rounded-full" alt="bg" />
+        </div>
+    )
+}
