@@ -13,7 +13,7 @@ function Section({ imgSrc, title, detail, scroll, ID }) {
         }
     })
     return (
-        <Link href={`/services#${ID}`} className={`flex flex-col items-center justify-center text-center p-10 gap-4 ${width} text-pretty`}>
+        <Link href={`/services#${ID}`} className={`flex flex-col items-center justify-center text-center p-10 gap-4 lg:${width} text-pretty`}>
             <Image src={imgSrc} width={600} height={600} className="lg:w-96 lg:h-auto w-60" alt="bg" />
             <span className="text-3xl font-bold capitalize">{title}</span>
             <span className="text-black text-sm lg:text-base font-light lg:w-4/6">{detail}</span>
