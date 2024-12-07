@@ -34,7 +34,7 @@ function ScrollToTop() {
                     ↑
                 </button>
             )}
-            <Link href={'/home'} className={`fixed lg:top-8 lg:left-10 top-4 left-4 ${Visible ? "opacity-100" : "opacity-0"} transition-opacity hidden lg:block`} >
+            <Link href={'/home'} className={`fixed lg:top-8 lg:left-10 top-4 left-4 opacity-100 transition-opacity hidden lg:block`} >
                 <Image src={"/LogoMark.svg"} alt='back to home' width={50} height={60} className='' />
             </Link>
         </div>
