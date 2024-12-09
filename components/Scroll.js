@@ -2,26 +2,26 @@
 import React, { useState, useEffect } from 'react';
 
 function ScrollToTop() {
-  const [Visible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const scrollY=window.scrollY
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const [Visible, setIsVisible] = useState(false);
+    useEffect(() => {
+        const scrollY = window.scrollY
+        const toggleVisibility = () => {
+            if (window.scrollY > 300) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     };
-
-    window.addEventListener('scroll', toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <div>
@@ -35,6 +35,7 @@ function ScrollToTop() {
       )}
     </div>
   );
+
 }
 
 export default ScrollToTop;

@@ -8,5 +8,4 @@ function page() {
     router.push('/home')
   )
 }
-
-export default page
+export default page;

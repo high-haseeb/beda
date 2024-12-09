@@ -22,6 +22,7 @@ function NavBar() {
       <Link href={'#footer'}>Contact</Link>
     </div>
   );
+
 }
 export default NavBar;
 

@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-function Section({imgSrc, title, detail,scroll,ID}) {
-    const [width,setWidth]=useState('w-1/3')
-    useEffect(()=>{
-        if(scroll){
+function Section({ imgSrc, title, detail, scroll, ID }) {
+    const [width, setWidth] = useState('w-1/3')
+    useEffect(() => {
+        if (scroll) {
             setWidth('w-full')
-        }else{
+        } else {
             setWidth('w-1/3')
         }
     })
