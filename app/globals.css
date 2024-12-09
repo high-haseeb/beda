@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-cursor {
-  cursor: url('/star.png'), auto;
+body, html {
+    cursor: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: none; /* Hide the default cursor */
 }
