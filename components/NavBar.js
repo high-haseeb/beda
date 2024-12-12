@@ -9,7 +9,6 @@ import Image from 'next/image';
 
 function NavBar() {
   const [isVisible, setVisible] = useState(false);
-
   return (
     <div className="fixed top-8 right-0 lg:right-10 flex items-center justify-center gap-6 lg:w-auto w-full text-base lg:text-2xl z-50">
       <Link href={'/home'}>Home</Link>
@@ -25,7 +24,6 @@ function NavBar() {
       <Link href={'#footer'}>Contact</Link>
     </div>
   );
-
 }
 export default NavBar;
 

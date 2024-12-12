@@ -20,18 +20,18 @@ function page() {
                     {/* <span className='capitalize text-xl px-10 lg:text-4xl absolute top-10 lg:left-10 left-0'>about page</span> */}
                     <span className="capitalize text-lg px-10 lg:text-3xl font-bold">“Beda” means “Different” in Bahasa Indonesia</span>
                 </div>
-                    <span className='capitalize text-sm lg:text-2xl w-4/5 lg:mt-10 mt-5 font-light text-center'>
-                        Different is Beda was founded with the vision of providing much-needed support and
-                        guidance to individuals who often face unique challenges in navigating mental health due to
-                        their neurodivergency, queer identity, and/or being a person of colour.
-                        Our founder, Bernadette, herself a neurodivergent, queer person of colour, recognised the
-                        lack of resources and understanding available to individuals like herself.
-                        With a focus on addressing mental health, neurodivergency, and diversity, Beda strives to
-                        support both individuals and organisations in creating a more inclusive and supportive
-                        environment</span>
+                <span className='capitalize text-sm lg:text-2xl w-4/5 lg:mt-10 mt-5 font-light text-center'>
+                    Different is Beda was founded with the vision of providing much-needed support and
+                    guidance to individuals who often face unique challenges in navigating mental health due to
+                    their neurodivergency, queer identity, and/or being a person of colour.
+                    Our founder, Bernadette, herself a neurodivergent, queer person of colour, recognised the
+                    lack of resources and understanding available to individuals like herself.
+                    With a focus on addressing mental health, neurodivergency, and diversity, Beda strives to
+                    support both individuals and organisations in creating a more inclusive and supportive
+                    environment</span>
             </div>
-            <Portfolio/>
-            <Coumunity/>
+            <Portfolio />
+            <Coumunity />
         </div>
     )
 }
@@ -40,8 +40,8 @@ export default page
 
 
 
-const Coumunity=()=>{
-    return(
+const Coumunity = () => {
+    return (
         <div className="w-screen h-auto lg:h-screen flex flex-col items-center justify-center relative font-semibold p-4 lg:p-40 text-center gap-8 _text-green-900">
             <span className="capitalize text-3xl lg:text-7xl font-bold">Our Commitment</span>
             {/* <span className="text-base lg:text-3xl">Based in Perth, WA, BEDA provides online coaching sessions, training and consultancy services for individuals and organisations across Australia.</span> */}

@@ -1,10 +1,11 @@
 "use client"
+import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 function ScrollToTop() {
     const [Visible, setIsVisible] = useState(false);
     useEffect(() => {
-        const scrollY = window.scrollY
         const toggleVisibility = () => {
             if (window.scrollY > 300) {
                 setIsVisible(true);
@@ -23,18 +24,21 @@ function ScrollToTop() {
         });
     };
 
-  return (
-    <div>
-      {Visible && (
-        <button
-          onClick={scrollToTop}
-          className="lg:w-14 lg:h-14 w-10 h-10 bg-black/45 text-white fixed rounded-full bottom-10 lg:right-10 right-4 z-50 flex items-center justify-center shadow-lg"
-        >
-          ↑
-        </button>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            {Visible && (
+                <button
+                    onClick={scrollToTop}
+                    className="lg:w-14 lg:h-14 w-10 h-10 bg-black/45 text-white fixed rounded-full bottom-10 lg:right-10 right-4 z-50 flex items-center justify-center shadow-lg"
+                >
+                    ↑
+                </button>
+            )}
+            <Link href={'/home'} className={`fixed lg:top-8 lg:left-10 top-4 left-4 opacity-100 transition-opacity hidden lg:block`} >
+                <Image src={"/LogoMark.svg"} alt='back to home' width={50} height={60} className='' />
+            </Link>
+        </div>
+    );
 
 }
 
